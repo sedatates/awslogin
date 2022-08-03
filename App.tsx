@@ -4,32 +4,20 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { Amplify } from "aws-amplify";
+//import awsconfig from "./src/aws-exports";
+
+import { HomeScreen } from "./src";
+
+//Amplify.configure(awsconfig);
+
 const Stack = createNativeStackNavigator();
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <TouchableOpacity>
-        <Text onPress={() => navigation.navigate("Home2")}>Go to Details</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
-function HomeScreen2({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <TouchableOpacity>
-        <Text onPress={() => navigation.navigate("Home")}>Go to Details</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Home2" component={HomeScreen2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
