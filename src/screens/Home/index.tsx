@@ -14,7 +14,7 @@ const Home = ({ navigation }) => {
           }}
         />
       </Card>
-
+          
       <Button
         style={styles.button}
         mode="outlined"

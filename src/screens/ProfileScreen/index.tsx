@@ -19,8 +19,6 @@ const Profile = ({ navigation }) => {
     setUser(user);
   };
 
-  console.log(user);
-
   useEffect(() => {
     userInfo();
   }, []);
@@ -45,7 +43,5 @@ const Profile = ({ navigation }) => {
     </View>
   );
 };
-
-
 
 export default Profile;
